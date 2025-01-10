@@ -66,10 +66,6 @@ a {
   color: #fff ;
 }
 
-li {
-  list-style: none;
-}
-
 .container{
   max-width: 120rem;
   margin: 0 auto;

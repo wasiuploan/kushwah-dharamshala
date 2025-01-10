@@ -13,14 +13,38 @@ const HeroSection = () => {
     <Wrapper>
       <div className="container">
         <div className="section-hero-data">
-          <p className="hero-top-data">Our Trust</p>
-          <h1 className="hero-heading">Kushwah Dharamshala</h1>
+          <h1 className="heading">Welcome to बुद्ध सेवा सदन</h1>
+          <h2 className="sub-heading">कुशवाहा धर्मशाला बासुकीनाथ, झारखंड।</h2>
           <p className="hero-para">
-            Lying in the shadow of mighty Dhauladhar range is the quaint town of
-            Dharamshala. Divided in two halves – Kotwali Bazar and the skirting
-            markets make up Lower Dharamshala, which makes a dramatic transition
-            in the upper reaches that has thick pine, cedar and Himalayan oak
-            forests around the township of Mcleodganj.{" "}
+            Welcome to कुशवाहा धर्मशाला Empowering Lives, 
+            Enriching Communities At कुशवाहा धर्मशाला, 
+            we are dedicated to making a meaningful difference in the lives of the underprivileged. 
+            Our mission is driven by compassion, service, and a commitment to fostering a brighter future for all. 
+            As a community-centered trust, we channel our efforts into three key areas:
+          </p>
+          <h2 className="sub-heading">Education for Every Child</h2>
+          <p className="hero-para">
+            We believe that education is the cornerstone of empowerment. 
+            Through our school initiatives, we provide quality education to children from economically disadvantaged backgrounds. 
+            Our aim is to nurture young minds, equip them with essential skills, and pave the way for a prosperous future.
+          </p>
+          <h2 className="sub-heading">Social Welfare Initiatives</h2>
+          <p className="hero-para">
+            Beyond education, our trust actively engages in social work to uplift communities. 
+            Whether it’s providing food and shelter, organizing health camps, or supporting women’s empowerment, 
+            we strive to address the needs of the underserved and promote holistic well-being.
+          </p>
+          <h2 className="sub-heading">Community Support</h2>
+          <p className="hero-para">
+            कुशवाहा धर्मशाला serves as a haven for individuals and families in need. 
+            Our facility provides a safe and welcoming space for people seeking assistance, 
+            whether it's temporary lodging or guidance for a better tomorrow.
+          </p>
+          <h2 className="sub-heading">Join Us in Our Mission</h2>
+          <p className="hero-para">
+            We invite you to be a part of our journey towards creating a society where no one is left behind. 
+            Together, we can amplify the impact of our efforts and bring hope to those who need it the most.
+            Contact us to learn more about our programs, volunteer opportunities, and ways you can contribute to our cause.
           </p>
           <Button className="btn hireme-button">
             <NavLink to="/contact">Contact us</NavLink>
@@ -29,7 +53,7 @@ const HeroSection = () => {
 
         {/* for image */}
         <div className="section-hero-image">
-          <Carousel infiniteLoop interval={2000} autoPlay>
+          <Carousel infiniteLoop interval={2000}   className="custom-carousel">
             <div>
               <img src="./images/kush-1.jpeg" />
               <p className="legend">Legend 1</p>
@@ -114,9 +138,13 @@ const Wrapper = styled.section`
     color: ${({ theme }) => theme.colors.helper};
   }
 
-  .hero-heading {
-    text-transform: uppercase;
-    font-size: 6.5rem;
+  .heading {
+    text-align: left;
+  }
+  .sub-heading {
+    font-size: 2rem;
+    text-align: left;
+    font-weight: 500;
   }
 
   .hero-para {
@@ -146,6 +174,16 @@ const Wrapper = styled.section`
   .hireme-button {
     color: #fff;
   }
+  /* .custom-carousel {
+    .slider {
+      .slide {
+        img {
+          max-width: 350px;
+          min-height: 120px;
+        }
+      }
+    }
+  } */
 
   @media (max-width: ${({ theme }) => theme.media.mobile}) {
     .container {

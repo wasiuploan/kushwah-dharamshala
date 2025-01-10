@@ -7,21 +7,18 @@ const Donation = () => {
 
   return (
     <Wrappper className="section" >
-      <h2 className='common-heading'>Donation</h2>
-      <h2>For Donation by Indian Citizens only</h2>
-      
-      <fieldset>
-        <legend>Terms of Donation</legend>
-        <ol>
-          <li>Please note that only donations towards BAPS Swaminarayan Sanstha, India, are accepted through this page. Contributions for foreign project / citizens / calamities abroad are not accepted.
-          </li>
-          <li>Donations once made cannot be cancelled nor refunded.
-          </li>
-          <li>Donation receipts can be downloaded and printed from this website after successful transactions. Receipts cannot be downloaded later.
-          </li>
-          <li>For any queries please contact on email. </li> 
-        </ol>
-        </fieldset>
+      <div className='account-details'>
+        <h2 className='common-heading'>Support Our Mission: Donate Today</h2>
+        <p>Your donation helps provide education to children, support families, and uplift communities. Join us in making a difference and creating a better future. Donate now.</p>
+     
+        <h2 className='sub-heading'>Account details for donation</h2>
+        <p><strong>Bank Name: </strong> State Bank of India</p>
+        <p><strong>Name: </strong> BUDHHA SEWA SADAN</p>
+        <p><strong>Account No.: </strong> 37179791629</p>
+        <p><strong>IFSC Code: </strong> SBIN0011813</p>
+      </div>
+      <div className='form-10ac'></div>
+     
       
     </Wrappper>
   );
@@ -30,12 +27,20 @@ const Donation = () => {
 const Wrappper = styled.section`
   padding: 9rem 2rem;
   background-color:${({ theme }) => theme.colors.bg};
-  legend {
-    margin-bottom: .5rem;
-    font-size: 2rem;
+  .common-heading {
+    margin-bottom: 1rem;
   }
-  ol li {
-    font-size: 1.5rem;
+  .account-details {
+    width: 50%;
+    margin: 0 auto;
+    h2 {
+      text-align: left;
+    }
+    .sub-heading {
+      font-weight: 600;
+      font-size: 3rem;
+      margin-top: 1rem;
+    }
   }
 
   @media (max-width:${({ theme }) => theme.media.tab}) {
@@ -44,7 +49,9 @@ const Wrappper = styled.section`
 
   @media (max-width:${({ theme }) => theme.media.mobile}) {
     
-    
+    .account-details {
+      width: 100%;
+    }
   }
 
 `
